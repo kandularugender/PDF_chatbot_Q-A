@@ -50,7 +50,7 @@ query = st.text_input("Ask a question about your PDFs")
 
 if query:
 
-    docs = vector_db.similarity_search(query, k=1)
+    docs = vector_db.similarity_search(query, k=3)
 
     context = "\n".join([doc.page_content for doc in docs])
 
